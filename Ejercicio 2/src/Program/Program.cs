@@ -12,7 +12,7 @@ namespace Program
             Doctor doctor = new Doctor("Pedro", "Gomez", "5.483.596-8", "Medico general");
             try
             {
-                Service.ScheduleAppointment(patient, doctor, new DateTime(2023, 10, 10), new DateTime(2023, 10, 10, 10, 15, 30));
+                Service.ScheduleAppointment(patient, doctor, new DateTime(2023, 10, 10), new DateTime(2023, 10, 10, 10, 15, 30), "Hospital Británico");
             }
             catch (Exception e)
             {

@@ -9,9 +9,9 @@ namespace Library
         cita médica, con las clases Patient, Doctor y Appointment, también la
         muestra en consola*/
 
-        public static void ScheduleAppointment(Patient patient, Doctor doctor, DateTime date, DateTime time)
+        public static void ScheduleAppointment(Patient patient, Doctor doctor, DateTime date, DateTime time, string place)
         {
-            Appointment appointment = new Appointment(date, time, patient, doctor, Guid.NewGuid().ToString());
+            Appointment appointment = new Appointment(date, time, patient, doctor, Guid.NewGuid().ToString(), place);
             if (AppointmentValidation.ValidateAppointment(appointment))
             {
                 Console.WriteLine($"Fecha de hoy: {DateTime.Now}");
