@@ -1,7 +1,7 @@
-#Comentarios sobre el código
+Comentarios sobre el código
 El código proporcionado para la clase `AppointmentService` no sigue de manera efectiva los principios del Expert y el SRP (Principio de Responsabilidad Única) en su diseño. Veamos el código y analicémoslo en relación a los requisitos mencionados:
 
-##Principio Expert
+Principio Expert
 
 El principio del Expert sugiere que una clase debe tener la experiencia (conocimiento) para realizar una operación específica. En este caso, la clase debería tener conocimiento sobre la coordinación de citas y la validación de datos.
 
@@ -9,13 +9,13 @@ En el código:
 
 - La clase "AppointmentService" maneja la creación de citas, pero también realiza la validación de datos.
 
-##SRP
+SRP
 
 El SRP establece que una clase debe tener solo una razón para cambiar. Aquí, una clase debería tener una única responsabilidad. En el código:
 
 - La clase "AppointmentService" combina dos responsabilidades: la creación de citas y la validación de datos. Esto viola el SRP porque son preocupaciones separadas.
 
-##Revisión del Código:
+Revisión del Código:
 
  - **Responsabilidades**: La clase "AppointmentService" tiene múltiples responsabilidades, incluida la creación de citas y la validación de datos. Es mejor separar estas responsabilidades en diferentes clases o métodos.
 
