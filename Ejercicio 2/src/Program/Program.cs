@@ -7,11 +7,17 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            string appointmentResult = AppointmentService.CreateAppointment("Steven Jhonson", "986782342", "5555-555-555", DateTime.Now, "Wall Street", "Armand");
-            Console.WriteLine(appointmentResult);
-
-            string appointmentResult2 = AppointmentService.CreateAppointment("Ralf Manson", "", "5555-555-555", DateTime.Now, "Queen Street", "");
-            Console.WriteLine(appointmentResult2);
+            //Se crea un paciente, un doctor y una cita
+            Patient patient = new Patient("Juan", "Perez", "3.312.475-0", 45, "099547654");
+            Doctor doctor = new Doctor("Pedro", "Gomez", "5.483.596-8", "Medico general");
+            try
+            {
+                Service.ScheduleAppointment(patient, doctor, new DateTime(2023, 10, 10), new DateTime(2023, 10, 10, 10, 15, 30));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
